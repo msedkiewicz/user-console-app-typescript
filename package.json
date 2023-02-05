@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/msedkiewicz/user-console-app-typescript#readme",
   "devDependencies": {
+    "@types/node": "^18.11.19",
     "inquirer": "^8.2.4",
     "nodemon": "^2.0.20",
     "ts-node": "^8.10.2"
