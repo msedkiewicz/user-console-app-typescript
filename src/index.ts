@@ -23,7 +23,6 @@ const startApp = () => {
             case Action.List:
                 users.showAll();
                 break;
-
             case Action.Add:
                 const user = await inquirer.prompt([{
                     name: 'name',
@@ -36,7 +35,6 @@ const startApp = () => {
                 }]);
                 users.add(user);
                 break;
-
             case Action.Remove:
                 const name = await inquirer.prompt([{
                     name: 'name',
@@ -46,13 +44,12 @@ const startApp = () => {
                 users.remove(name.name);
                 break;
             case Action.Quit:
-                Message.showColorized(MessageVariant.Info, "See you later!");
+                Message.showColorized(MessageVariant.Info, "Bye bye!");
                 return;
             default:
                 Message.showColorized(MessageVariant.Error, "Command not found :(");
                 break;
         }
-
         startApp();
     });
 }
